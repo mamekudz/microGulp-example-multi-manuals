@@ -1,0 +1,26 @@
+{
+	"name": "microgulp-example-multi-manuals",
+	"version": "1.1.0",
+	"private": true,
+	"type": "module",
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"manuals": "node cli.mjs",
+		"test": "node --test tests/*.test.mjs",
+		"release:check": "node tools/RecipeRelease.mjs --check",
+		"release:sync": "node tools/RecipeRelease.mjs --sync",
+		"release:version": "node tools/RecipeRelease.mjs --version",
+		"release:history": "node tools/RecipeRelease.mjs --history",
+		"pretest": "npm run release:check"
+	},
+	"dependencies": {
+		"docx-templates": "4.13.0"
+	},
+	"devDependencies": {
+		"gulp": "5.0.1",
+		"gulp-mu-gulp-api": "file:vendor/gulp-mu-gulp-api-0.7.0.tgz",
+		"jszip": "3.10.1"
+	}
+}

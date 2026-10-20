@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"features": {
+		"pdf": false
+	},
+	"variants": [
+		{
+			"id": "company-a-windows-1_4",
+			"client": "MyClientCompanyA",
+			"clientName": "Company A",
+			"platform": "Windows",
+			"version": "1.4.0",
+			"template": "../µGulp_LibreOffice_Word_Demo_Manual.src.docx"
+		},
+		{
+			"id": "company-b-macos-1_5",
+			"client": "MyClientCompanyB",
+			"clientName": "Company B",
+			"platform": "MacOS",
+			"version": "1.5.0",
+			"template": "../µGulp_LibreOffice_Word_Demo_Manual.src.docx"
+		}
+	]
+}

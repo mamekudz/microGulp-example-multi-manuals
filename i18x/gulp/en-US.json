@@ -1,0 +1,15 @@
+{
+	"Generate manuals<context=\"manuals\"/>": "Generate manuals",
+	"Each run creates a new local output directory.<context=\"manuals\"/>": "Each run creates a new local output directory.",
+	"Variants<context=\"manuals\"/>": "Variants",
+	"Export PDF with LibreOffice<context=\"manuals\"/>": "Export PDF with LibreOffice",
+	"Manuals created in <directory/><context=\"manuals\"/>": "Manuals created in <directory/>",
+	"Creates client, platform and release variants from a maintained Word template.<context=\"µDescription\"/>": "Creates client, platform and release variants from a maintained Word template.",
+	"Documentation<context=\"µGroup\"/>": "Documentation",
+	"Added client, platform and release variants with an isolated LibreOffice field-update and PDF export script.<context=\"release info\"/>": "Added client, platform and release variants with an isolated LibreOffice field-update and PDF export script.",
+	"Added standalone recipe version validation and package synchronization.<context=\"release info\"/>": "Added standalone recipe version validation and package synchronization.",
+	"Generate manuals V<recipeVersion/><context=\"µDisplayName\"/>": "Generate manuals V<recipeVersion/>",
+	"Added a distinct example project title and bundled microGulp logo.<context=\"release info\"/>": "Added a distinct example project title and bundled microGulp logo.<context=\"release info\"/>",
+	"Use the single maintained Word template directly and remove the duplicate template and normalization script.<context=\"release info\"/>": "Use the single maintained Word template directly and remove the duplicate template and normalization script.",
+	"Added dashboard keyboard shortcuts with explicit macOS bindings and usage documentation.<context=\"release info\"/>": "Added dashboard keyboard shortcuts with explicit macOS bindings and usage documentation."
+}

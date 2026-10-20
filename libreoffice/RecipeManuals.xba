@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script:module xmlns:script="http://openoffice.org/2000/script" script:name="RecipeManuals" script:language="StarBasic"><![CDATA[
+Option Explicit
+
+' This library is installed only in the dedicated per-export profile.
+Sub ExportManual(sourceUrl As String, pdfUrl As String, markerUrl As String)
+ On Error GoTo Failed
+ Dim doc As Object, indexes As Object, index As Integer
+ Dim properties(2) As New com.sun.star.beans.PropertyValue
+ properties(0).Name = "Hidden"
+ properties(0).Value = True
+ properties(1).Name = "MacroExecutionMode"
+ properties(1).Value = 0 ' NEVER_EXECUTE for macros embedded in the input document.
+ properties(2).Name = "UpdateDocMode"
+ properties(2).Value = 3
+ doc = StarDesktop.loadComponentFromURL(sourceUrl, "_blank", 0, properties())
+ doc.TextFields.refresh()
+ indexes = doc.getDocumentIndexes()
+ For index = 0 To indexes.getCount() - 1
+  indexes.getByIndex(index).update()
+ Next index
+ Dim dispatcher As Object
+ dispatcher = createUnoService("com.sun.star.frame.DispatchHelper")
+ dispatcher.executeDispatch(doc.getCurrentController().getFrame(), ".uno:UpdateAll", "", 0, Array())
+ doc.TextFields.refresh()
+ doc.store()
+ Dim exportProperties(0) As New com.sun.star.beans.PropertyValue
+ exportProperties(0).Name = "FilterName"
+ exportProperties(0).Value = "writer_pdf_Export"
+ doc.storeToURL(pdfUrl, exportProperties())
+ doc.close(True)
+ Call WriteResult(markerUrl, "ok")
+ StarDesktop.terminate()
+ Exit Sub
+Failed:
+ Dim message As String
+ message = "error: " & CStr(Err) & " " & Error$
+ On Error Resume Next
+ doc.close(True)
+ Call WriteResult(markerUrl, message)
+ StarDesktop.terminate()
+End Sub
+
+Sub WriteResult(markerUrl As String, message As String)
+ Dim number As Integer
+ number = FreeFile
+ Open ConvertFromURL(markerUrl) For Output As #number
+ Print #number, message
+ Close #number
+End Sub
+]]></script:module>

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Multiple manuals configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "features",
+    "variants"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pdf"
+      ],
+      "properties": {
+        "pdf": {
+          "type": "boolean"
+        }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "client",
+          "clientName",
+          "platform",
+          "version",
+          "template"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+          },
+          "client": {
+            "enum": [
+              "MyClientCompanyA",
+              "MyClientCompanyB"
+            ]
+          },
+          "clientName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "platform": {
+            "enum": [
+              "Windows",
+              "MacOS"
+            ]
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+          },
+          "template": {
+            "type": "string",
+            "pattern": "^fixtures/[A-Za-z0-9_.-]+\\.docx$"
+          }
+        }
+      }
+    }
+  }
+}

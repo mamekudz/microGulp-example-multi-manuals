@@ -1,0 +1,14 @@
+{
+	"Generate manuals<context=\"manuals\"/>": "Handbücher erzeugen",
+	"Each run creates a new local output directory.<context=\"manuals\"/>": "Jeder Lauf erzeugt einen neuen lokalen Ausgabeordner.",
+	"Variants<context=\"manuals\"/>": "Varianten",
+	"Export PDF with LibreOffice<context=\"manuals\"/>": "PDF mit LibreOffice exportieren",
+	"Manuals created in <directory/><context=\"manuals\"/>": "Handbücher erstellt unter <directory/>",
+	"Creates client, platform and release variants from a maintained Word template.<context=\"µDescription\"/>": "Erzeugt Client-, Plattform- und Releasevarianten aus einer gepflegten Word-Vorlage.",
+	"Documentation<context=\"µGroup\"/>": "Dokumentation",
+	"Added client, platform and release variants with an isolated LibreOffice field-update and PDF export script.<context=\"release info\"/>": "Client-, Plattform- und Releasevarianten mit isoliertem LibreOffice-Skript für Feldaktualisierung und PDF-Export ergänzt.",
+	"Added standalone recipe version validation and package synchronization.<context=\"release info\"/>": "Eigenständige Versionsprüfung und Paketsynchronisierung für das Recipe ergänzt.",
+	"Generate manuals V<recipeVersion/><context=\"µDisplayName\"/>": "Handbücher erzeugen V<recipeVersion/>",
+	"Use the single maintained Word template directly and remove the duplicate template and normalization script.<context=\"release info\"/>": "Einzige gepflegte Word-Vorlage direkt verwenden; doppelte Vorlage und Normalisierungsskript entfernt.",
+	"Added dashboard keyboard shortcuts with explicit macOS bindings and usage documentation.<context=\"release info\"/>": "Dashboard-Kurztasten mit eigener macOS-Belegung und Bedienhinweisen ergänzt."
+}
