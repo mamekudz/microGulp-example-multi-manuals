@@ -80,7 +80,7 @@ CREATE_MANUALS.µKeyBinding = { key: 'ctrl+shift+F4', mac: 'cmd+shift+F4' };
 ```
 
 <!-- blog-publication:start -->
-Artikel: [Deutsch](https://microgulp.dev/blogs/multi-manuals)
+Artikel: [Deutsch](https://microgulp.dev/de/blog/multi-manuals/)
 
 Weitere Beispiele: [microGulp-Examples](https://github.com/mamekudz/microGulp-Examples).
 <!-- blog-publication:end -->

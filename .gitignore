@@ -4,9 +4,3 @@ dist/
 .microgulp/
 *.log
 .DS_Store
-
-AGENTS.md
-.env
-.env.*
-.npm-cache/
-references/oxyd/
